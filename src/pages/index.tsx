@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <div className="bg-[#272727] text-white h-screen snap-y snap-mandatory overflow-scroll z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
       <Head>
-        <title>Naren's Portfolio</title>
+        <title>Naren&#39;s Portfolio</title>
       </Head>
 
       {/* Header */}
