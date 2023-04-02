@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <title>Portfolio</title>
+</head>
+
+<body>
+  <nav>
+    <div class="logo">Naren's Portfolio</div>
+    <input type="checkbox" id="menu-btn" />
+    <label for="menu-btn" class="menu-icon"><span>&nbsp;</span></label>
+    <ul class="nav-items">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#experiences">Experiences</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <main>
+    <section id="home" class="home_section">
+      <h2>Welcome to my portfolio!</h2>
+      <div class="pdf-container">
+        <img src="prof_head_shot.jpg" alt="A beautiful image" class="imp" />
+      </div>
+      <div>
+        <p>
+        <h1>My Name is Naren Rachapalli!</h1>
+        Here you can learn more about me and my work
+        </p>
+      </div>
+    </section>
+
+    <section id="about" class="about_section">
+      <h2>About Me</h2>
+      <p>
+        I am an undergraduate student at Purdue University, studying computer
+        science, but originally from Naperville, IL. I love programming languages especially Python, C/C++, and
+        Java. Mainly, I excel with data science tools like TensorFlow,
+        Scikit-Learn, Pandas, NumPy, and Seaborn. In my internships at Amazon,
+        Merck, and eAlliance Corporation, I worked on statistical models, test
+        automation frameworks, data visualization, and natural language
+        processing. I enjoy creating personal projects, like trading bots and
+        an artificial neural networks. Currently, I am looking for new
+        opportunities to learn and grow as a software engineer and data
+        scientist!
+      </p>
+    </section>
+
+    <section id="portfolio" class="portfolio_section">
+      <h2>Portfolio</h2>
+      <div class="pdf-container">
+        <embed src="resume.pdf" type="application/pdf" width="95%" height="600px" />
+      </div>
+      <a href="resume.pdf" download="naren-rachapalli-resume.pdf" class="download-btn">
+        Download Resume PDF
+      </a>
+    </section>
+
+    <section id="experiences" class="experiences_section">
+      <h2>Experiences</h2>
+      <p>Here are some of my past experiences:</p>
+      <div class="grid">
+
+        <div class="grid-item">
+          <p class="grid-header"><b>Purdue University | STAT 190: Data Mining I | August 2022 to December 2022</b></p>
+          <p class="grid-subheader"><u>Undergraduate Teaching Assistant</u></p>
+          <ul>
+            <li>Educated students on improving their Python (Pandas), SQL, and R programming skills for data science
+              purposes.</li>
+            <li>Facilitated office hours to assist students with course content.</li>
+          </ul>
+
+        </div>
+
+        <div class="grid-item">
+          <p class="grid-header"><b>Amazon | Project Kuiper Organization | May 2022 - August 2022</b></p>
+          <p class="grid-subheader"><u>Software Development Engineer Intern</u></p>
+          <p>Tools: Python, AWS, Matplotlib, Seaborn, Grafana, and Docker</p>
+          <ul>
+            <li>Designed statistical models improving validation efficiency by 70% through analyzing time-series
+              telemetry data for hardware and software validation across satellite subsystems and test procedures.</li>
+            <li>Integrated containerized model into the test automation framework for efficient testing of satellite
+              subsystems.</li>
+            <li>Developed dashboards to simulate orbital modem pass performance, identifying key areas for improvement.
+            </li>
+          </ul>
+
+        </div>
+        <div class="grid-item">
+          <p class="grid-header"><b>Merck | Global Research Team | August 2021 - May 2022</b></p>
+          <p class="grid-subheader"><u>Undergraduate Data Science Researcher</u></p>
+          <p>Tools: Python, Flask, React, AWS, Docker, and Databricks</p>
+          <ul>
+            <li>Deployed containerized web app for efficient storage, parsing, and monitoring of drug sample data to
+              facilitate forecasting, CSV uploads, visualization, and expedite drug development.</li>
+            <li>Improved sample labeling efficiency by 50% by generating unique QR codes to resolve double labeling
+              issues.</li>
+            <li>Operated Github, Slack, Jira, and Confluence for project management and team collaboration.
+            </li>
+          </ul>
+        </div>
+
+        <div class="grid-item">
+          <p class="grid-header"><b>SN Soft-Tech Incorporation | IT Team | November 2020 - Jan 2021</b></p>
+          <p class="grid-subheader"><u>Information Technology Intern</u></p>
+          <p>Tools: Python, Pandas, SQLalchemy, and MySQL</p>
+          <ul>
+            <li>Devised Python process to dynamically generate and execute DML scripts for dumping CSV files of over 170
+              tables to a SQLServer database, effectively mimicking the Taleo Warehouse Database in SQLServer.</li>
+            <li>Saved approximately 200 employee hours of manual data entry and received positive feedback for
+              implementing the process.</li>
+          </ul>
+
+        </div>
+        <div class="grid-item">
+          <p class="grid-header">eAlliance Corporation | Automation Solutions Team | June 2020 - July 2020</p>
+          <p class="grid-subheader"><u>Machine Learning Engineer Intern</u></p>
+          <p>Tools: Python, Pandas, Scikit-Learn, NLTK, and UiPath</p>
+          <ul>
+            <li>Engineered a natural language processing tool for automated extraction of purchase order numbers from
+              emails.</li>
+            <li>Integrated RPA into a larger system for automating shipping inquiries by retrieving shipping details
+              from SAP improving customer inquiry response times tenfold to streamline the supply chain process.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="projects" class="projects_section">
+      <h2>Projects</h2>
+      <p>Here are some of my projects:</p>
+      <div class="grid">
+        
+        <div class="grid-item">
+          <p class="grid-header">Bitcoin Reinforcement Trading Bot</p>
+          <p class="grid-subheader"><u>Machine Learning Club @ Purdue</u></p>
+          <p>Tools: Python, Pandas, Scikit-Learn, NLTK, and UiPath</p>
+          <ul>
+            <li>Established a profitable trading bot to optimize profits through strategic buying and selling, resulting
+              in 74% ROI.
+            </li>
+            <li>Utilized deep reinforcement learning techniques, specifically a Deep Recurrent Q-Network with LSTM, to
+              analyze historical bitcoin prices data with CUDA support.</li>
+          </ul>
+        </div>
+        
+        <div class="grid-item">
+          <p class="grid-header">First Tech Challenge Robotic Rover</p>
+          <p class="grid-subheader"><u>Personal Project</u></p>
+          <p>Tools: Java</p>
+          <ul>
+            <li>Founded and managed the team by overseeing paperwork, sponsorships, and workshops, while ensuring compliance with competition regulations and maintaining documentation to support future development. 
+            </li>
+            <li>Programmed rover to navigate, detect, and collect minerals autonomously, resulting in top scores in competitions.</li>
+          </ul>
+        </div>
+
+        <div class="grid-item">
+          <p class="grid-header">Connect Four Minimax</p>
+          <p class="grid-subheader"><u>Personal Project</u></p>
+          <p>Tools: Java</p>
+          <ul>
+            <li>Founded and managed the team by overseeing paperwork, sponsorships, and workshops, while ensuring compliance with competition regulations and maintaining documentation to support future development. 
+            </li>
+            <li>Programmed rover to navigate, detect, and collect minerals autonomously, resulting in top scores in competitions.</li>
+          </ul>
+        </div>
+
+        <div class="grid-item">
+          <p class="grid-header">Blood Cell CNN Classifier</p>
+          <p class="grid-subheader"><u>Personal Project</u></p>
+          <p>Tools: Java</p>
+          <ul>
+            <li>Founded and managed the team by overseeing paperwork, sponsorships, and workshops, while ensuring compliance with competition regulations and maintaining documentation to support future development. 
+            </li>
+            <li>Programmed rover to navigate, detect, and collect minerals autonomously, resulting in top scores in competitions.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="contact" class="contact_section">
+      <h2>Contact Me</h2>
+      <p>You can reach me on my .....</p>
+      <p>Email: <span class="hlink">nrachapa09@gmail.com</span></p>
+      <p>Phone: <span class="hlink">+1 (630) 280-4723</span></p>
+      <p>Other Links: <a class="hlink" href="https://www.linkedin.com/in/nrachapa">LinkedIn</a> and <a class="hlink"
+          href="https://www.github.com/nrachapa">Github</a></p>
+    </section>
+  </main>
+</body>
+
+</html>

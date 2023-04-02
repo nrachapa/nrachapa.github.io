@@ -1,0 +1,65 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+nav {
+	background-color: #2c3e50;
+	color: white;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 1rem;
+}
+
+nav .logo {
+	font-size: 1.5rem;
+	font-weight: bold;
+	margin-right: auto;
+}
+
+nav .menu-icon {
+	cursor: pointer;
+	display: block;
+	font-size: 1.5rem;
+	margin-left: auto;
+	padding: 1rem;
+	position: relative;
+	z-index: 1;
+}
+
+nav .menu-icon span {
+	background-color: white;
+	display: block;
+	height: 2px;
+	position: relative;
+	transform-origin: center;
+	transition: background-color 0.2s ease-out,
+	            transform 0.2s ease-out;
+	width: 100%;
+}
+
+nav .menu-icon span::before,
+nav .menu-icon span::after {
+	background-color: white;
+	content: "";
+	display: block;
+	height: 100%;
+	position: absolute;
+	transition: transform 0.2s ease-out;
+	width: 100%;
+}
+
+nav .menu-icon span::before {
+	top: -7px;
+}
+
+nav .menu-icon span::after {
+	top: 7px;
+}
+
+nav .nav-items {
+	background-color: #2c3e50;
+	color: white;
+	display
