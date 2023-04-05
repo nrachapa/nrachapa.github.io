@@ -230,18 +230,23 @@ html {
 .experiences_section {
   height: 30%;
   padding: 50px 0;
-  background-color: #a8d0e6;
+  background-color: #810541;
 }
 
 .projects_section {
   height: 30%;
 
+  background-color: #24305e;
+}
+
+.certifications_section {
+  height: 30%;
   background-color: #f76c6c;
 }
 
 .contact_section {
   height: 30%;
-  background-color: #24305e;
+  background-color: #a8d0e6;
 }
 
 .image-container {
