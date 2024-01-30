@@ -304,7 +304,12 @@ img {
 }
 
 .hlink {
-  color: #f8e9a1;
+  color: grey;
+}
+
+a:hover {
+  color: gold;
+  background-color: transparent;
 }
 
 ul li {
