@@ -60,12 +60,6 @@
 
               function erase() {
                 const typewriter = document.getElementById("typewriter");
-                if (letterIndex === 0) {
-                  currentPhrase++;
-                  if (currentPhrase === phrases.length) {
-                    currentPhrase = 0;
-                  }
-                }
                 typewriter.innerHTML = phrases[currentPhrase].substring(
                   0,
                   letterIndex - 1
@@ -73,6 +67,9 @@
                 letterIndex--;
                 if (letterIndex === 0) {
                   setTimeout(type, 500);
+                  if (currentPhrase++ > 4) {
+                    currentPhrase = 0;
+                  }
                 } else {
                   setTimeout(erase, 100);
                 }
