@@ -10,7 +10,7 @@
 
   <body>
     <nav>
-      <div class="logo">Naren's Portfolio</div>
+      <div class="logo">Naren Rachapalli</div>
       <input type="checkbox" id="menu-btn" />
       <label for="menu-btn" class="menu-icon"><span>&nbsp;</span></label>
       <ul class="nav-items">
@@ -30,15 +30,14 @@
         </div>
         <div>
           <p>
-            <span style="font-size: 40px">My Name is</span><br />&nbsp;
-            <span style="font-size: 40px" id="typewriter"></span>
+            <span style="font-size: 40px">Naren Rachapalli</span><br />
+            <span style="font-size: 25px" id="typewriter"></span>&nbsp;
             <script>
               const phrases = [
-                "Naren Rachapalli!",
                 "Loves Data Science!",
                 "Passionate Chess Player!",
                 "Programming Enthusiast",
-                "Here you can learn more about me and my work!",
+                "Learn more about me here!",
               ];
               let currentPhrase = 0;
               let letterIndex = 0;
@@ -47,6 +46,9 @@
                 const typewriter = document.getElementById("typewriter");
                 if (letterIndex === 0) {
                   typewriter.innerHTML = "";
+                }
+                if (currentPhrase > 3) {
+                  currentPhrase = 0;
                 }
                 typewriter.innerHTML +=
                   phrases[currentPhrase].charAt(letterIndex);
@@ -67,11 +69,14 @@
                 letterIndex--;
                 if (letterIndex === 0) {
                   setTimeout(type, 500);
-                  if (currentPhrase++ > 4) {
+                  if (currentPhrase++ > 3) {
                     currentPhrase = 0;
                   }
                 } else {
                   setTimeout(erase, 100);
+                  if (currentPhrase > 3) {
+                    currentPhrase = 0;
+                  }
                 }
               }
 
