@@ -40,8 +40,9 @@
             <script>
               const phrases = [
                 "Loves Data Science!",
-                "Passionate Chess Player!",
                 "Programming Enthusiast",
+                "Passionate Chess Player!",
+                "Always Curious!",
                 "Learn more about me here!",
               ];
               let currentPhrase = 0;
@@ -74,12 +75,12 @@
                 letterIndex--;
                 if (letterIndex === 0) {
                   setTimeout(type, 500);
-                  if (currentPhrase++ > 3) {
+                  if (currentPhrase++ > 4) {
                     currentPhrase = 0;
                   }
                 } else {
                   setTimeout(erase, 100);
-                  if (currentPhrase > 3) {
+                  if (currentPhrase > 4) {
                     currentPhrase = 0;
                   }
                 }
