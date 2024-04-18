@@ -243,6 +243,12 @@ html {
   height: 30%;
   background-color: #4d2d18;
 }
+
+.documents_section {
+  height: 30%;
+  background-color: #112d32;
+}
+
 .contact_section {
   height: 30%;
   background-color: #cbb180;
