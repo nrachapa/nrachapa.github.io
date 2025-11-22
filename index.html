@@ -1,481 +1,340 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <title>Portfolio</title>
-  </head>
 
-  <body>
-    <nav>
-      <div class="logo">Naren Rachapalli</div>
-      <input type="checkbox" id="menu-btn" />
-      <label for="menu-btn" class="menu-icon"><span>&nbsp;</span></label>
-      <ul class="nav-items">
-        <li><a href="#home">HOME</a></li>
-        <li><a href="#about">ABOUT</a></li>
-        <li><a href="#portfolio">PORTFOLIO</a></li>
-        <li><a href="#experiences">EXPERIENCES</a></li>
-        <li><a href="#projects">PROJECTS</a></li>
-        <li><a href="#certifications">CERTIFICATIONS</a></li>
-        <li><a href="#documents">RESEARCH</a></li>
-        <li><a href="#contact">CONTACT</a></li>
-      </ul>
-    </nav>
-    <main>
-      <section id="home" class="home_section">
-        <div class="pdf-container">
-          <img
-            src="docs/prof_head_shot.jpg"
-            alt="A beautiful image"
-            class="imp"
-          />
-        </div>
-        <div>
-          <p>
-            <span style="font-size: 40px">Naren Rachapalli</span><br />
-            <span style="font-size: 25px" id="typewriter"></span>&nbsp;
-            <script>
-              const phrases = [
-                "Loves Data Science!",
-                "Programming Enthusiast",
-                "Passionate Chess Player!",
-                "Always Curious!",
-                "Learn more about me here!",
-              ];
-              let currentPhrase = 0;
-              let letterIndex = 0;
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <title>Naren Rachapalli - Portfolio</title>
+</head>
 
-              function type() {
-                const typewriter = document.getElementById("typewriter");
-                if (letterIndex === 0) {
-                  typewriter.innerHTML = "";
-                }
-                if (currentPhrase > 3) {
-                  currentPhrase = 0;
-                }
-                typewriter.innerHTML +=
-                  phrases[currentPhrase].charAt(letterIndex);
-                letterIndex++;
-                if (letterIndex === phrases[currentPhrase].length + 1) {
-                  setTimeout(erase, 1500);
-                } else {
-                  setTimeout(type, 100);
-                }
-              }
-
-              function erase() {
-                const typewriter = document.getElementById("typewriter");
-                typewriter.innerHTML = phrases[currentPhrase].substring(
-                  0,
-                  letterIndex - 1
-                );
-                letterIndex--;
-                if (letterIndex === 0) {
-                  setTimeout(type, 500);
-                  if (currentPhrase++ > 4) {
-                    currentPhrase = 0;
-                  }
-                } else {
-                  setTimeout(erase, 100);
-                  if (currentPhrase > 4) {
-                    currentPhrase = 0;
-                  }
-                }
-              }
-
-              document.addEventListener("DOMContentLoaded", function () {
-                type();
-              });
-            </script>
-          </p>
-        </div>
-      </section>
-
-      <section id="about" class="about_section">
-        <h2>About Me</h2>
-        <p>
-          Hello! My name is Naren Rachapalli, and I am a computer science
-          undergraduate student at Purdue University with a passion for
-          programming languages, particularly Python, C/C++, and Java. I have a
-          strong background in data science tools, including TensorFlow,
-          Scikit-Learn, Pandas, NumPy, and Seaborn. My internships at Amazon,
-          Merck, and eAlliance Corporation have given me valuable experience in
-          statistical models, test automation frameworks, data visualization,
-          and natural language processing. I love taking on personal projects,
-          such as developing trading bots and artificial neural networks. As a
-          software engineer and data scientist, I am always eager to learn, and
-          grow, and always excited to explore new opportunities.
+<body>
+  <div class="bento-container">
+    <!-- Profile / Intro Card -->
+    <div class="card profile-card">
+      <div class="profile-image-container">
+        <img src="docs/prof_head_shot.jpg" alt="Naren Rachapalli" class="profile-img" />
+      </div>
+      <div class="profile-info">
+        <h1>Naren Rachapalli</h1>
+        <p class="tagline">
+          Data Science Enthusiast & Software Engineer
         </p>
-      </section>
-
-      <section id="portfolio" class="portfolio_section">
-        <h2>Portfolio</h2>
-        <div class="pdf-container">
-          <embed
-            src="docs/resume.pdf"
-            type="application/pdf"
-            width="95%"
-            height="600px"
-          />
+        <div class="tags">
+          <span>Python</span>
+          <span>C/C++</span>
+          <span>Java</span>
+          <span>TensorFlow</span>
+          <span>AWS</span>
         </div>
+      </div>
+    </div>
 
-        <a
-          href="docs/resume.pdf"
-          download="naren-rachapalli-resume.pdf"
-          class="download-btn"
-        >
-          Download Resume PDF
+    <!-- About Card -->
+    <div class="card about-card">
+      <h2>About Me</h2>
+      <p>
+        Hello! My name is Naren Rachapalli, and I am a computer science
+        undergraduate student at Purdue University with a passion for
+        programming languages, particularly Python, C/C++, and Java. I have a
+        strong background in data science tools, including TensorFlow,
+        Scikit-Learn, Pandas, NumPy, and Seaborn. My internships at Amazon,
+        Merck, and eAlliance Corporation have given me valuable experience in
+        statistical models, test automation frameworks, data visualization,
+        and natural language processing. I love taking on personal projects,
+        such as developing trading bots and artificial neural networks. As a
+        software engineer and data scientist, I am always eager to learn, and
+        grow, and always excited to explore new opportunities.
+      </p>
+    </div>
+
+    <!-- Social / Contact Card -->
+    <div class="card contact-card">
+      <h2>Contact</h2>
+      <div class="contact-links">
+        <a href="mailto:nrachapa09@gmail.com" target="_blank" class="contact-link">
+          Email
         </a>
-      </section>
+        <a href="tel:+1(630)280-4723" target="_blank" class="contact-link">
+          Phone
+        </a>
+        <a href="https://www.linkedin.com/in/nrachapa" target="_blank" class="contact-link">
+          LinkedIn
+        </a>
+        <a href="https://www.github.com/nrachapa" target="_blank" class="contact-link">
+          Github
+        </a>
+      </div>
+    </div>
 
-      <section id="experiences" class="experiences_section">
-        <h2>Experiences</h2>
-        <div class="grid">
-          <div class="grid-item">
-            <p class="grid-header">Amazon</p>
-            <p class="grid-subheader">
-              <u>Software Development Engineer</u>
-            </p>
-            <ul>
-              <li>
-                Led large-scale infrastructure migration of AWS real-time AI/ML
-                transcription service to automated fleet management system by
-                designing global deployment strategy, automating fleet scaling
-                while maintaining 100% service availability
-              </li>
-              <li>
-                Automated customer terminal provisioning by developing a python
-                script to configure modulation frequency schemes.
-              </li>
-              <li>
-                Implemented a custom testing framework to command and manage all
-                venues across the satellite in production.
-              </li>
-              <li>
-                Built a test suite to trigger a gps emulator to spoof ground
-                gateways for simulating satellite contact scenarios.
-              </li>
-              <li>
-                Developed a tool to periodically collect and process MAC data
-                across venues on the satellite to enable diﬀerent testing teams
-                to share and assess data on a singular platform.
-              </li>
-              <li>
-                Created a processed table in PySpark to summarize all CQM and
-                MAC data, drastically improving the speed by 72% by automating
-                and improving on the original ETL processes along with being
-                able to ingest higher volumes of data.
-              </li>
-            </ul>
-          </div>
+    <!-- Resume Card -->
+    <div class="card resume-card">
+      <h2>Resume</h2>
+      <a href="#preview-resume" class="download-btn">
+        Preview Resume
+      </a>
+    </div>
 
-          <div class="grid-item">
-            <p class="grid-header">
-              Purdue University Computational Quantum Electromagnetics Lab
-            </p>
-            <p class="grid-subheader">
-              <u>Undergraduate Research Assistant</u>
-            </p>
-            <ul>
-              <li>
-                Designed and developed an algorithm for generating Hamiltonian
-                matrices tailored to diverse quantum systems by allowing it to
-                generate based on different transmon qubits and cavities.
-              </li>
-              <li>
-                Developed ordinary differential equations to effectively solve
-                Schrödinger's equation for in-depth analysis of the quantum
-                system dynamics.
-              </li>
-            </ul>
-          </div>
-
-          <div class="grid-item">
-            <p class="grid-header">Amazon</p>
-            <p class="grid-subheader">
-              <u>Software Development Engineer Intern</u>
-            </p>
-            <ul>
-              <li>
-                Designed statistical models to validate hardware and software
-                across satellite subsystems by analyzing time-series telemetry,
-                resulting in a 70% improvement in validation efficiency.
-              </li>
-              <li>
-                Leveraged real-time forecasting to proactively identify
-                anomalies in live telemetry for quicker interventions.
-              </li>
-              <li>
-                Developed dashboards to simulate orbital modem pass performance,
-                identifying key areas for correction.
-              </li>
-              <li>
-                Achieved certifications in AWS Cloud Practitioner Essentials,
-                MLOPs, and Time Series Forecasting.
-              </li>
-              <li>
-                Pioneered a network anomaly detection model across layers and
-                links into the production test automation framework.
-              </li>
-              <li>
-                Generated a dynamic data visualization dashboard utilizing
-                telemetry from antenna hardware and cloud services.
-              </li>
-              <li>
-                Impacted satellite subsystems, production environment test
-                procedures, and mission operations procedures.
-              </li>
-              <li>
-                Documented model architecture and provided training for end
-                users, ensuring smooth adoption.
-              </li>
-              <li>
-                Presented vital statistical insights on network traffic patterns
-                to Amazon Project Kuiper leadership.
-              </li>
-            </ul>
-          </div>
-
-          <div class="grid-item">
-            <p class="grid-header">Merck</p>
-            <p class="grid-subheader">
-              <u>Undergraduate Data Science Researcher</u>
-            </p>
-            <ul>
-              <li>
-                Deployed containerized web app for efficient storage, parsing,
-                and monitoring of drug sample data to facilitate forecasting,
-                CSV uploads, visualization, and expedite drug development.
-              </li>
-              <li>
-                Improved sample labeling efficiency by 50% by generating unique
-                QR codes to resolve double labeling issues.
-              </li>
-              <li>
-                Operated Github, Slack, Jira, and Confluence for project
-                management and team collaboration.
-              </li>
-            </ul>
-          </div>
-
-          <div class="grid-item">
-            <p class="grid-header">eAlliance Corporation</p>
-            <p class="grid-subheader">
-              <u>Machine Learning Engineer Intern</u>
-            </p>
-            <ul>
-              <li>
-                Engineered a natural language processing tool for automated
-                extraction of purchase order numbers from emails.
-              </li>
-              <li>
-                Integrated RPA into a larger system for automating shipping
-                inquiries by retrieving shipping details from SAP improving
-                customer inquiry response times tenfold to streamline the supply
-                chain process.
-              </li>
-            </ul>
-          </div>
+    <!-- Experiences Card -->
+    <div class="card experiences-card">
+      <h2>Experiences</h2>
+      <div class="experience-list">
+        <div class="experience-item">
+          <h3>Amazon</h3>
+          <p class="role">Software Development Engineer</p>
+          <ul>
+            <li>
+              Led large-scale infrastructure migration of AWS real-time AI/ML
+              transcription service to automated fleet management system.
+            </li>
+            <li>
+              Automated customer terminal provisioning by developing a python
+              script to configure modulation frequency schemes.
+            </li>
+            <li>
+              Implemented a custom testing framework to command and manage all
+              venues across the satellite in production.
+            </li>
+          </ul>
         </div>
-      </section>
-
-      <section id="projects" class="projects_section">
-        <h2>Projects</h2>
-        <div class="grid">
-          <div class="grid-item">
-            <p class="grid-header">
-              <a
-                class="hlink"
-                href="https://github.com/nrachapa/Bitcoin-RL-Trading-Bot"
-                target="_blank"
-                >Bitcoin Reinforcement Trading Bot</a
-              >
-            </p>
-            <p class="grid-subheader"><u>Machine Learning Club @ Purdue</u></p>
-            <ul>
-              <li>
-                Established a profitable trading bot to optimize profits through
-                strategic buying and selling, resulting in 74% ROI.
-              </li>
-              <li>
-                Utilized deep reinforcement learning techniques, specifically a
-                Deep Recurrent Q-Network with LSTM, to analyze historical
-                bitcoin prices data with CUDA support.
-              </li>
-            </ul>
-          </div>
-
-          <div class="grid-item">
-            <p class="grid-header">
-              <a
-                class="hlink"
-                href="https://github.com/nrachapa/FTCRover"
-                target="_blank"
-                >FTC Robotic Rover
-              </a>
-            </p>
-            <p class="grid-subheader"><u>Personal Project</u></p>
-            <ul>
-              <li>
-                Founded and managed the team by overseeing paperwork,
-                sponsorships, and workshops, while ensuring compliance with
-                competition regulations and maintaining documentation to support
-                future development.
-              </li>
-              <li>
-                Programmed rover to navigate, detect, and collect minerals
-                autonomously, resulting in top scores in competitions.
-              </li>
-            </ul>
-          </div>
-
-          <div class="grid-item">
-            <p class="grid-header">
-              <a
-                class="hlink"
-                href="https://github.com/nrachapa/Connect4Ai"
-                target="_blank"
-                >Connect Four Minimax</a
-              >
-            </p>
-            <p class="grid-subheader"><u>Personal Project</u></p>
-            <ul>
-              <li>
-                Developed a gui executing a backtracking minimax algorithm and
-                alpha-beta pruning to determine a best move for Connect Four in
-                2-player as a hint or 1-player as an opponent.
-              </li>
-            </ul>
-          </div>
-
-          <div class="grid-item">
-            <p class="grid-header">
-              <a
-                class="hlink"
-                href="https://github.com/nrachapa/BloodCellClassifier"
-                target="_blank"
-                >Blood Cell CNN Classifier</a
-              >
-            </p>
-            <p class="grid-subheader"><u>Personal Project</u></p>
-            <ul>
-              <li>
-                Implemented data preprocessing techniques to prepare the image
-                dataset for model training and evaluation.
-              </li>
-              <li>
-                Assembled an artificial neural network model to accurately
-                classify different types of blood cells in images with a success
-                rate of 98% on testing data.
-              </li>
-            </ul>
-          </div>
+        <div class="experience-item">
+          <h3>Purdue University CQEM Lab</h3>
+          <p class="role">Undergraduate Research Assistant</p>
+          <ul>
+            <li>
+              Designed and developed an algorithm for generating Hamiltonian
+              matrices tailored to diverse quantum systems.
+            </li>
+            <li>
+              Developed ordinary differential equations to effectively solve
+              Schrödinger's equation.
+            </li>
+          </ul>
         </div>
-      </section>
-
-      <section id="certifications" class="certifications_section">
-        <h2>Certifications</h2>
-        <div class="grid">
-          <div class="grid-item">
-            <p class="grid-header"><b>Amazon Machine Learning University</b></p>
-            <p class="grid-subheader"><u>MLOps</u></p>
-          </div>
-          <div class="grid-item">
-            <p class="grid-header"><b>Amazon Machine Learning University</b></p>
-            <p class="grid-subheader"><u>Time Series Forecasting</u></p>
-          </div>
-          <div class="grid-item">
-            <p class="grid-header"><b>Amazon</b></p>
-            <p class="grid-subheader"><u>AWS Technical Essentials</u></p>
-          </div>
-          <div class="grid-item">
-            <p class="grid-header"><b>Amazon</b></p>
-            <p class="grid-subheader">
-              <u>AWS Cloud Practitioner Essentials</u>
-            </p>
-          </div>
-          <div class="grid-item">
-            <p class="grid-header"><b>TestDome</b></p>
-            <p class="grid-subheader"><u>Python</u></p>
-          </div>
-          <div class="grid-item">
-            <p class="grid-header"><b>University of Helsinki</b></p>
-            <p class="grid-subheader"><u>Elements of AI</u></p>
-          </div>
-          <div class="grid-item">
-            <p class="grid-header"><b>Villanova University</b></p>
-            <p class="grid-subheader">
-              <u>AI and Machine Learning using TensorFlow</u>
-            </p>
-          </div>
+        <div class="experience-item">
+          <h3>Amazon</h3>
+          <p class="role">Software Development Engineer Intern</p>
+          <ul>
+            <li>
+              Designed statistical models to validate hardware and software
+              across satellite subsystems.
+            </li>
+            <li>
+              Leveraged real-time forecasting to proactively identify
+              anomalies in live telemetry.
+            </li>
+          </ul>
         </div>
-      </section>
-
-      <section id="documents" class="documents_section">
-        <h2><br />Research</h2>
-
-        <h3>CQEM 2023 Research Expo Poster</h3>
-        <div class="pdf-container">
-          <embed
-            src="docs/CQEM_poster_2023.pdf"
-            type="application/pdf"
-            width="95%"
-            height="600px"
-          />
+        <div class="experience-item">
+          <h3>Merck</h3>
+          <p class="role">Undergraduate Data Science Researcher</p>
+          <ul>
+            <li>
+              Deployed containerized web app for efficient storage, parsing,
+              and monitoring of drug sample data.
+            </li>
+            <li>
+              Improved sample labeling efficiency by 50% by generating unique
+              QR codes.
+            </li>
+          </ul>
         </div>
-        <br />
-        <h3>CQEM 2024 Research Expo Poster</h3>
-        <div class="pdf-container">
-          <embed
-            src="docs/CQEM_poster_2024.pdf"
-            type="application/pdf"
-            width="95%"
-            height="600px"
-          />
+        <div class="experience-item">
+          <h3>eAlliance Corporation</h3>
+          <p class="role">Machine Learning Engineer Intern</p>
+          <ul>
+            <li>
+              Engineered a natural language processing tool for automated
+              extraction of purchase order numbers from emails.
+            </li>
+          </ul>
         </div>
-        <br />
-        <h3>Statistical Machine Learning Final Paper</h3>
-        <div class="pdf-container">
-          <embed
-            src="docs/Zero_Few_shot_Foundation_Models.pdf"
-            type="application/pdf"
-            width="95%"
-            height="600px"
-          />
-        </div>
-      </section>
+      </div>
+    </div>
 
-      <section id="contact" class="contact_section">
-        <h2>Contact Me</h2>
-        <div>
+    <!-- Projects Card -->
+    <div class="card projects-card">
+      <h2>Projects</h2>
+      <div class="project-list">
+        <div class="project-item">
+          <h3>
+            <a href="https://github.com/nrachapa/Bitcoin-RL-Trading-Bot" target="_blank">
+              Bitcoin Reinforcement Trading Bot
+            </a>
+          </h3>
+          <p class="project-sub">Machine Learning Club @ Purdue</p>
           <p>
-            <a class="hlink" href="mailto:nrachapa09@gmail.com" target="_blank"
-              >nrachapa09@gmail.com</a
-            >
-            <br />
-            <a class="hlink" href="tel:+1(630)280-4723" target="_blank"
-              >+1 (630) 280-4723</a
-            >
-            <br />
-            <a
-              class="hlink"
-              href="https://www.linkedin.com/in/nrachapa"
-              target="_blank"
-              >LinkedIn</a
-            >
-            <br />
-            <a
-              class="hlink"
-              href="https://www.github.com/nrachapa"
-              target="_blank"
-              >Github</a
-            >
+            Established a profitable trading bot to optimize profits through
+            strategic buying and selling, resulting in 74% ROI.
           </p>
         </div>
-      </section>
-    </main>
-  </body>
+        <div class="project-item">
+          <h3>
+            <a href="https://github.com/nrachapa/FTCRover" target="_blank">
+              FTC Robotic Rover
+            </a>
+          </h3>
+          <p class="project-sub">Personal Project</p>
+          <p>
+            Programmed rover to navigate, detect, and collect minerals
+            autonomously, resulting in top scores in competitions.
+          </p>
+        </div>
+        <div class="project-item">
+          <h3>
+            <a href="https://github.com/nrachapa/Connect4Ai" target="_blank">
+              Connect Four Minimax
+            </a>
+          </h3>
+          <p class="project-sub">Personal Project</p>
+          <p>
+            Developed a gui executing a backtracking minimax algorithm and
+            alpha-beta pruning to determine a best move for Connect Four.
+          </p>
+        </div>
+        <div class="project-item">
+          <h3>
+            <a href="https://github.com/nrachapa/BloodCellClassifier" target="_blank">
+              Blood Cell CNN Classifier
+            </a>
+          </h3>
+          <p class="project-sub">Personal Project</p>
+          <p>
+            Assembled an artificial neural network model to accurately
+            classify different types of blood cells in images with a success
+            rate of 98%.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Certifications Card -->
+    <div class="card certifications-card">
+      <h2>Certifications</h2>
+      <div class="cert-grid">
+        <div class="cert-item">
+          <b>Amazon ML University</b><br>MLOps
+        </div>
+        <div class="cert-item">
+          <b>Amazon ML University</b><br>Time Series Forecasting
+        </div>
+        <div class="cert-item">
+          <b>Amazon</b><br>AWS Technical Essentials
+        </div>
+        <div class="cert-item">
+          <b>Amazon</b><br>AWS Cloud Practitioner Essentials
+        </div>
+        <div class="cert-item">
+          <b>TestDome</b><br>Python
+        </div>
+        <div class="cert-item">
+          <b>University of Helsinki</b><br>Elements of AI
+        </div>
+        <div class="cert-item">
+          <b>Villanova University</b><br>AI and ML using TensorFlow
+        </div>
+      </div>
+    </div>
+
+    <!-- Research Card -->
+    <div class="card research-card">
+      <h2>Research</h2>
+      <div class="research-list">
+        <div class="research-item">
+          <h3>CQEM 2023 Research Expo Poster</h3>
+          <a href="#preview-poster-2023">View Preview</a>
+        </div>
+        <div class="research-item">
+          <h3>CQEM 2024 Research Expo Poster</h3>
+          <a href="#preview-poster-2024">View Preview</a>
+        </div>
+        <div class="research-item">
+          <h3>Statistical Machine Learning Final Paper</h3>
+          <a href="#preview-paper-ml">View Preview</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Modals for PDF Previews -->
+
+  <!-- Resume Modal -->
+  <div id="preview-resume" class="modal-overlay">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Resume Preview</h2>
+        <div class="header-actions">
+          <a href="docs/resume.pdf" download class="modal-download-btn">Download</a>
+          <a href="#" class="close-btn">&times;</a>
+        </div>
+      </div>
+      <div class="pdf-container">
+        <iframe src="docs/resume.pdf" width="100%" height="100%" style="border:none;">
+          <p>Your browser does not support PDFs. <a href="docs/resume.pdf">Download the PDF</a>.</p>
+        </iframe>
+      </div>
+    </div>
+    <a href="#" class="modal-backdrop-close"></a>
+  </div>
+
+  <!-- Research Modals -->
+  <div id="preview-poster-2023" class="modal-overlay">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>CQEM 2023 Research Expo Poster</h2>
+        <div class="header-actions">
+          <a href="docs/CQEM_poster_2023.pdf" download class="modal-download-btn">Download</a>
+          <a href="#" class="close-btn">&times;</a>
+        </div>
+      </div>
+      <div class="pdf-container">
+        <iframe src="docs/CQEM_poster_2023.pdf" width="100%" height="100%" style="border:none;">
+          <p>Your browser does not support PDFs. <a href="docs/CQEM_poster_2023.pdf">Download the PDF</a>.</p>
+        </iframe>
+      </div>
+    </div>
+    <a href="#" class="modal-backdrop-close"></a>
+  </div>
+
+  <div id="preview-poster-2024" class="modal-overlay">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>CQEM 2024 Research Expo Poster</h2>
+        <div class="header-actions">
+          <a href="docs/CQEM_poster_2024.pdf" download class="modal-download-btn">Download</a>
+          <a href="#" class="close-btn">&times;</a>
+        </div>
+      </div>
+      <div class="pdf-container">
+        <iframe src="docs/CQEM_poster_2024.pdf" width="100%" height="100%" style="border:none;">
+          <p>Your browser does not support PDFs. <a href="docs/CQEM_poster_2024.pdf">Download the PDF</a>.</p>
+        </iframe>
+      </div>
+    </div>
+    <a href="#" class="modal-backdrop-close"></a>
+  </div>
+
+  <div id="preview-paper-ml" class="modal-overlay">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Statistical Machine Learning Final Paper</h2>
+        <div class="header-actions">
+          <a href="docs/Zero_Few_shot_Foundation_Models.pdf" download class="modal-download-btn">Download</a>
+          <a href="#" class="close-btn">&times;</a>
+        </div>
+      </div>
+      <div class="pdf-container">
+        <iframe src="docs/Zero_Few_shot_Foundation_Models.pdf" width="100%" height="100%" style="border:none;">
+          <p>Your browser does not support PDFs. <a href="docs/Zero_Few_shot_Foundation_Models.pdf">Download the
+              PDF</a>.</p>
+        </iframe>
+      </div>
+    </div>
+    <a href="#" class="modal-backdrop-close"></a>
+  </div>
+
+</body>
+
 </html>
