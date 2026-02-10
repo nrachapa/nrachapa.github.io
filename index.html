@@ -19,7 +19,7 @@
       <div class="profile-info">
         <h1>Naren Rachapalli</h1>
         <p class="tagline">
-          Data Science Enthusiast & Software Engineer
+          ML Enthusiast & Software Engineer
         </p>
         <div class="tags">
           <span>Python</span>
@@ -35,17 +35,11 @@
     <div class="card about-card">
       <h2>About Me</h2>
       <p>
-        Hello! My name is Naren Rachapalli, and I am a computer science
-        undergraduate student at Purdue University with a passion for
-        programming languages, particularly Python, C/C++, and Java. I have a
-        strong background in data science tools, including TensorFlow,
-        Scikit-Learn, Pandas, NumPy, and Seaborn. My internships at Amazon,
-        Merck, and eAlliance Corporation have given me valuable experience in
-        statistical models, test automation frameworks, data visualization,
-        and natural language processing. I love taking on personal projects,
-        such as developing trading bots and artificial neural networks. As a
-        software engineer and data scientist, I am always eager to learn, and
-        grow, and always excited to explore new opportunities.
+        I build production ML infrastructure for real time inference. Right now I work on AWS Transcribe, focused on GPU
+        and CPU model serving, performance optimization, reliability, and scaling. Previously, I worked on test
+        automation and telemetry analytics for satellite systems at Amazon Leo, and I did research at Purdue on
+        computational quantum electromagnetics, including Hamiltonian construction for multi qubit transmon systems and
+        numerical methods for Schrödinger equation.
       </p>
     </div>
 
@@ -56,9 +50,9 @@
         <a href="mailto:nrachapa09@gmail.com" target="_blank" class="contact-link">
           Email
         </a>
-        <a href="tel:+1(630)280-4723" target="_blank" class="contact-link">
+        <!-- <a href="tel:+1(630)280-4723" target="_blank" class="contact-link">
           Phone
-        </a>
+        </a> -->
         <a href="https://www.linkedin.com/in/nrachapa" target="_blank" class="contact-link">
           LinkedIn
         </a>
@@ -81,20 +75,42 @@
       <h2>Experiences</h2>
       <div class="experience-list">
         <div class="experience-item">
-          <h3>Amazon</h3>
+          <h3>Amazon Web Services Transcribe</h3>
           <p class="role">Software Development Engineer</p>
           <ul>
             <li>
-              Led large-scale infrastructure migration of AWS real-time AI/ML
-              transcription service to automated fleet management system.
+              Built production routing for GPU models with request validation, allowlisting, canary tests, alarms, and
+              automatic CPU fallback
             </li>
             <li>
-              Automated customer terminal provisioning by developing a python
-              script to configure modulation frequency schemes.
+              Integrated Custom Vocabulary support for GPU inference using locale specific embeddings for customer
+              defined terms
             </li>
             <li>
-              Implemented a custom testing framework to command and manage all
-              venues across the satellite in production.
+              Shipped a language identification model with expanded locale coverage by fine tuning weights to reduce
+              misclassifications
+            </li>
+            <li>
+              Increased peak traffic capacity through multiple instance types and reduced cold start
+              latency by about 20 percent using predictive scaling and warm pools, supporting ARR growth from about 50M
+              to about 100M
+            </li>
+          </ul>
+        </div>
+        <div class="experience-item">
+          <h3>Amazon Leo</h3>
+          <p class="role">Software Development Engineer</p>
+          <ul>
+            <li>
+              Built a production testing framework to command and configure satellite venues for end to end validation
+              across modulation frequency schemes
+            </li>
+            <li>
+              Enabled simulation of satellite contact scenarios by triggering GPS spoofing to increase coverage without
+              live passes
+            </li>
+            <li>
+              Improved ETL performance by about 72 percent by creating PySpark tables that summarize CQM and MAC data
             </li>
           </ul>
         </div>
@@ -113,16 +129,24 @@
           </ul>
         </div>
         <div class="experience-item">
-          <h3>Amazon</h3>
+          <h3>Amazon Leo</h3>
           <p class="role">Software Development Engineer Intern</p>
           <ul>
             <li>
-              Designed statistical models to validate hardware and software
-              across satellite subsystems.
+              Improved satellite subsystem validation efficiency by about 70 percent using statistical and time series
+              telemetry models across hardware and software components
             </li>
             <li>
-              Leveraged real-time forecasting to proactively identify
-              anomalies in live telemetry.
+              Built real time anomaly detection and forecasting into production test automation for early issue
+              detection
+            </li>
+            <li>
+              Developed dashboards using antenna and cloud telemetry to simulate orbital modem passes and surface
+              corrective actions
+            </li>
+            <li>
+              Provided network traffic insights to leadership, documented model architecture, and trained end users for
+              adoption
             </li>
           </ul>
         </div>
